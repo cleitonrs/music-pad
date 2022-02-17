@@ -1,0 +1,215 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #4f3f4f;
+}
+
+.container{
+  max-width: 600px;
+  margin: 50px auto;
+}
+
+.case{
+  background: #303030;
+  position: relative;
+  height: 500px;
+  width: 350px;
+  border-radius: 18px;
+  border: 5px solid #1f1f;
+  margin: 0 auto;
+  /* box-shadow: inset -4px 0 4px rgba(0,0,0,0.15),
+  inset 0 -4px 4px rgba(0,0,0,0.25),
+  0 0 0 1px rgba(0,0,0,0.75),
+  5px 10px 12.5px rgba(0,0,0,0.4); */
+  box-shadow: 5px 5px 20px 5px;
+}
+
+.title{
+  position: absolute;
+  background: #303030;
+  height: 48px;
+  width: 300px;
+  border-radius: 10px;
+  border: 5px solid #404040;
+  top: 10px;
+  left: 20px;
+  text-indent: 20px;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Lucida Console", Monaco, monospace;
+  color: #019875;
+  text-transform: uppercase;
+  line-height: 40px;
+  letter-spacing: 0px;
+}
+
+
+/* .overlay{
+  border-radius: 4px;
+  height: 100%;
+  width: 100%;
+} */
+
+.keys {
+  display: grid;
+  margin: 80px 20px;
+  grid-template-areas: "num divide multiply subtract"
+                       "seven eight nine plus"
+                       "four five six plus"
+                       "one two three enter"
+                       "zero zero comma enter";
+  max-width: 580px;
+  gap: 15px;
+}
+
+.key {
+  border: 2px solid #1f1f;
+  transition: all 0.07s;
+}
+
+.playing {
+  transform: scale(.95);
+  border-color: #1f1f;
+  box-shadow: none;
+}
+
+
+.num {
+  display: none;
+  grid-area: num;
+  height: 60px;
+  width: 60px;
+}
+
+.divide {
+  grid-area: divide;
+  height: 60px;
+  width: 60px;
+}
+
+.multiply {
+  grid-area: multiply;
+  height: 60px;
+  width: 60px;
+}
+
+.subtract {
+  grid-area: subtract;
+  height: 60px;
+  width: 60px;
+}
+
+.seven {
+  grid-area: seven;
+  height: 60px;
+  width: 60px;
+}
+
+.eight {
+  grid-area: eight;
+  height: 60px;
+  width: 60px;
+}
+
+.nine {
+  grid-area: nine;
+  height: 60px;
+  width: 60px;
+}
+
+.plus {
+  grid-area: plus;
+  height: 142px;
+  width: 60px;
+}
+
+.four {
+  grid-area: four;
+  height: 60px;
+  width: 60px;
+}
+
+.five {
+  grid-area: five;
+  height: 60px;
+  width: 60px;
+}
+
+.six {
+  grid-area: six;
+  height: 60px;
+  width: 60px;
+}
+
+.one {
+  grid-area: one;
+  height: 60px;
+  width: 60px;
+}
+
+.two {
+  grid-area: two;
+  height: 60px;
+  width: 60px;
+}
+
+.three {
+  grid-area: three;
+  height: 60px;
+  width: 60px;
+}
+
+.zero {
+  grid-area: zero;
+  height: 60px;
+  width: 140px;
+}
+
+.comma {
+  grid-area: comma;
+  height: 60px;
+  width: 60px;
+}
+
+.enter {
+  grid-area: enter;
+  height: 142px;
+  width: 60px;
+}
+
+
+/* button{
+  background: #2ECC71;
+  border-radius: 8px;
+  border: 4px solid #606060;
+} */
+
+button {
+  position: relative;
+  margin: 4px 2.5px;
+  border-radius: 10px;
+  background-image: linear-gradient(180deg, #2ecc71, #1f1f);
+  box-shadow: inset -4px 0 4px rgba(0,0,0,0.15),
+  inset 0 -4px 4px rgba(0,0,0,0.25),
+  0 0 0 1px rgba(0,0,0,0.75),
+  5px 10px 12.5px rgba(0,0,0,0.4);
+  overflow: hidden;
+}
+
+button:active {
+  /* box-shadow: none; */
+  box-shadow: 1px 1px 20px 2px #1f1f;
+}
+
+button.playing {
+  box-shadow: 5px 5px 20px 5px #1f1f;
+}
+
