@@ -25,38 +25,50 @@ body {
   border-radius: 18px;
   border: 5px solid #1f1f;
   margin: 0 auto;
-  /* box-shadow: inset -4px 0 4px rgba(0,0,0,0.15),
-  inset 0 -4px 4px rgba(0,0,0,0.25),
-  0 0 0 1px rgba(0,0,0,0.75),
-  5px 10px 12.5px rgba(0,0,0,0.4); */
   box-shadow: 5px 5px 20px 5px;
 }
 
 .title{
   position: absolute;
-  background: #303030;
+  background: #4f4f4f;
   height: 48px;
   width: 300px;
   border-radius: 10px;
-  border: 5px solid #404040;
+  border: 3px solid #202020;
   top: 10px;
   left: 20px;
   text-indent: 20px;
   text-align: left;
   font-size: 20px;
   font-family: "Lucida Console", Monaco, monospace;
-  color: #019875;
+  color: transparent;
+  -webkit-text-stroke: 1px #01987580;
   text-transform: uppercase;
   line-height: 40px;
   letter-spacing: 0px;
 }
 
+.title::before {
+  content: attr(data-text);
+  position: absolute;
+  color: #1f1f;
+  width: 0;
+  overflow: hidden;
+  transition: 2s ease;
+}
 
-/* .overlay{
-  border-radius: 4px;
-  height: 100%;
-  width: 100%;
-} */
+.title::before {
+  animation: animate 5s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 50%;
+  }
+}
 
 .keys {
   display: grid;
@@ -74,6 +86,8 @@ body {
   border: 2px solid #1f1f;
   transition: all 0.07s;
 }
+
+
 
 .playing {
   transform: scale(.95);
@@ -205,8 +219,7 @@ button {
 }
 
 button:active {
-  /* box-shadow: none; */
-  box-shadow: 1px 1px 20px 2px #1f1f;
+  box-shadow: 5px 5px 20px 5px #1f1f;
 }
 
 button.playing {
