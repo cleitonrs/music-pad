@@ -199,13 +199,6 @@ body {
   width: 60px;
 }
 
-
-/* button{
-  background: #2ECC71;
-  border-radius: 8px;
-  border: 4px solid #606060;
-} */
-
 button {
   position: relative;
   margin: 4px 2.5px;
@@ -220,9 +213,10 @@ button {
 
 button:active {
   box-shadow: 5px 5px 20px 5px #1f1f;
+  transform: scale(.95);
+  border-color: #1f1f;
 }
 
 button.playing {
   box-shadow: 5px 5px 20px 5px #1f1f;
 }
-
