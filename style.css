@@ -220,3 +220,21 @@ button:active {
 button.playing {
   box-shadow: 5px 5px 20px 5px #1f1f;
 }
+
+footer {
+  margin: 20px 20px 5px; 
+  position: fixed;
+  bottom: 0;
+  color: #fff;
+  text-align: center;
+  font-family: "Lucida Console", Monaco, monospace;
+  font-style: italic;
+}
+
+a {
+  color: #1f1f;
+}
+
+a:hover {
+  text-shadow: 1px 1px 25px;
+}
